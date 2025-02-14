@@ -27,6 +27,7 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
@@ -63,8 +64,80 @@ nav ul li a {
     color: var(--texto);
 }
 
-#servicios {
+/* Secciones generales */
+section {
     padding: 50px 20px;
+    text-align: center;
+}
+
+/* Estilo para la sección "Nosotros" */
+#nosotros {
+    background-color: var(--secundario);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Estilo para Misión y Visión */
+#mision-vision h3 {
+    color: var(--primario);
+    margin-top: 20px;
+}
+
+#mision-vision p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Preguntas Frecuentes (FAQ) */
+#faq {
+    background-color: var(--fondo);
+    padding: 40px 20px;
+}
+
+#faq details {
+    background-color: var(--secundario);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+#faq details summary {
+    font-weight: bold;
+    color: var(--texto);
+}
+
+#faq details p {
+    margin-top: 10px;
+}
+
+/* Garantía y Políticas */
+#garantia {
+    background-color: var(--secundario);
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+#garantia ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#garantia ul li {
+    background-color: var(--fondo);
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    text-align: left;
+}
+
+/* Sección Servicios */
+#servicios {
     text-align: center;
 }
 
@@ -83,6 +156,7 @@ nav ul li a {
     text-align: left;
 }
 
+/* Sección de Contacto */
 #contacto {
     text-align: center;
     padding: 40px 20px;
@@ -102,21 +176,27 @@ nav ul li a {
     background-color: var(--boton-hover);
     color: var(--texto);
 }
+
+/* Botón de WhatsApp flotante */
 .whatsapp-chat {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
 }
+
 .whatsapp-chat img {
     width: 60px;
     height: 60px;
     cursor: pointer;
     transition: transform 0.3s;
 }
+
 .whatsapp-chat img:hover {
     transform: scale(1.1);
 }
+
+/* Footer */
 footer {
     background-color: var(--primario);
     color: white;
@@ -124,6 +204,7 @@ footer {
     padding: 15px;
     margin-top: 20px;
 }
+
 footer a {
     color: white;
     text-decoration: none;
@@ -133,4 +214,3 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
-

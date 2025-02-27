@@ -7,3 +7,27 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+/* Menú de Navegación */
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navMenu = document.getElementById("nav-menu");
+    const menuIcon = document.getElementById("menu-icon");
+
+    menuToggle.addEventListener("click", () => {
+        console.log("Botón de menú clickeado"); // Debugging
+
+        if (navMenu.classList.contains("hidden")) {
+            navMenu.classList.remove("hidden");
+            navMenu.classList.add("flex");
+            menuIcon.classList.remove("fa-bars");
+            menuIcon.classList.add("fa-times"); // Cambia el icono a "X"
+        } else {
+            navMenu.classList.add("hidden");
+            navMenu.classList.remove("flex");
+            menuIcon.classList.remove("fa-times");
+            menuIcon.classList.add("fa-bars"); // Vuelve al icono de hamburguesa
+        }
+    });
+});

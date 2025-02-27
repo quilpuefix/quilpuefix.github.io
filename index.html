@@ -30,7 +30,14 @@
     <header class="bg-primario text-white py-4">
         <nav class="container mx-auto flex justify-between items-center px-4">
             <div class="text-xl font-bold">QuilpueFix</div>
-            <ul class="flex space-x-6">
+    
+            <!-- Botón hamburguesa (solo en móviles) -->
+            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
+                <i id="menu-icon" class="fas fa-bars"></i>
+            </button>
+    
+            <!-- Menú de navegación -->
+            <ul id="nav-menu" class="hidden flex-col absolute top-16 left-0 w-full bg-primario md:bg-transparent md:static md:flex md:flex-row md:space-x-6 md:space-y-0 space-y-4 items-center text-center transition-all duration-300">
                 <li><a href="#servicios" class="hover:text-botonHover">Servicios</a></li>
                 <li><a href="#nosotros" class="hover:text-botonHover">Nosotros</a></li>
                 <li><a href="#reseñas" class="hover:text-botonHover">Reseñas</a></li>
@@ -40,6 +47,8 @@
                 <li><a href="https://wa.me/56973196767" class="bg-secundario text-white px-4 py-2 rounded hover:bg-botonHover">WhatsApp</a></li>
             </ul>
         </nav>
+    </header>
+        
     </header>
     
     <!-- Hero -->
@@ -245,7 +254,6 @@
                 <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
-    
         <div class="footer-bottom">
             <p>&copy; 2025 QuilpuéFix. Todos los derechos reservados.</p>
         </div>

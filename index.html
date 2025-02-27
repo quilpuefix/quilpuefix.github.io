@@ -4,111 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuilpueFix - Reparación de Computadoras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        fondo: '#f4f7f3',
+                        primario: '#3d5a80',
+                        secundario: '#98c1d9',
+                        texto: '#293241',
+                        botonHover: '#e0fbfc',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="logo">QuilpuéFix</div>
-            <ul>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#nosotros">Nosotros</a></li>
-                <li><a href="#mision-vision">Misión y Visión</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#garantia">Garantía</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="https://wa.me/56973196767?text=Hola%2C%20quiero%20reservar%20una%20cita%20para%20reparar%20mi%20computadora.">Reservar Cita</a></li>
+<body class="bg-fondo text-texto">
+    
+    <!-- Navbar -->
+    <header class="bg-primario text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <div class="text-xl font-bold">QuilpueFix</div>
+            <ul class="flex space-x-6">
+                <li><a href="#servicios" class="hover:text-botonHover">Servicios</a></li>
+                <li><a href="#nosotros" class="hover:text-botonHover">Nosotros</a></li>
+                <li><a href="#reseñas" class="hover:text-botonHover">Reseñas</a></li>
+                <li><a href="#pagos" class="hover:text-botonHover">Métodos de Pago</a></li>
+                <li><a href="#trabajos" class="hover:text-botonHover">Trabajos</a></li>
+                <li><a href="#faq" class="hover:text-botonHover">(FAQ)</a></li>
+                <li><a href="https://wa.me/56973196767" class="bg-secundario text-white px-4 py-2 rounded hover:bg-botonHover">WhatsApp</a></li>
             </ul>
         </nav>
     </header>
-
-    <section class="hero">
-        <h1>Reparación y Mantenimiento de Computadoras</h1>
-        <p>Soluciones rápidas y eficientes para tu equipo.</p>
-        <a href="https://wa.me/56973196767?text=Hola%2C%20quiero%20reservar%20una%20cita%20para%20reparar%20mi%20computadora." class="btn">Reserva tu cita ahora</a>
+    
+    <!-- Hero -->
+    <section class="text-center py-20 bg-secundario text-white">
+        <h1 class="text-4xl font-bold">Reparación y Mantenimiento de Computadoras</h1>
+        <p class="text-lg mt-4">Soluciones rápidas y eficientes para tu equipo.</p>
+        <a href="https://wa.me/56973196767" class="mt-6 inline-block bg-primario px-6 py-3 text-white font-bold rounded-lg hover:bg-botonHover">Reserva tu Cita</a>
     </section>
-
-    <section id="nosotros">
-        <h2>Nosotros</h2>
-        <p>Somos dos jóvenes estudiantes con una gran pasión por la tecnología y el emprendimiento. QuilpuéFix nace con la misión de ofrecer soluciones confiables y accesibles para la reparación y mantenimiento de computadoras en la comuna de Quilpué y alrededores. Nos especializamos en diagnóstico, reparación de hardware, optimización de software y mantenimiento preventivo. Creemos en la transparencia, la calidad del servicio y la satisfacción de nuestros clientes como pilares fundamentales de nuestro trabajo. Queremos seguir creciendo, aprendiendo y ofreciendo el mejor servicio posible. ¡Gracias por confiar en nosotros!</p>
-    </section>
-
-    <section id="mision-vision">
-        <h2>Misión y Visión</h2>
-        <h3>Misión</h3>
-        <p>Ofrecer servicios de reparación y mantenimiento de computadoras con calidad y rapidez, asegurando la satisfacción de nuestros clientes.</p>
-        <h3>Visión</h3>
-        <p>Ser la empresa líder en soluciones tecnológicas en Quilpué, destacándonos por nuestra confiabilidad y excelencia en el servicio.</p>
-    </section>
-
-    <section id="faq">
-        <h2>Preguntas Frecuentes (FAQ)</h2>
-        <details>
-            <summary>¿Cuánto demora una reparación?</summary>
-            <p>El tiempo varía según el problema, pero en general las reparaciones toman entre 24 y 72 horas.</p>
-        </details>
-        <details>
-            <summary>¿Qué tipo de dispositivos reparan?</summary>
-            <p>Reparamos laptops, PCs de escritorio y consolas (PlayStation & Xbox).</p>
-        </details>
-        <details>
-            <summary>¿Ofrecen garantía?</summary>
-            <p>Sí, todas nuestras reparaciones cuentan con una garantía de 30 días.</p>
-        </details>
-    </section>
-
-    <section id="garantia">
-        <h2>Garantía y Políticas</h2>
-        <p>En QuilpuéFix garantizamos la calidad de nuestras reparaciones. Nuestra política de garantía cubre defectos en el servicio durante 30 días después de la entrega.</p>
-        <ul>
-            <li>La garantía no cubre daños por mal uso del cliente.</li>
-            <li>Las piezas reemplazadas tienen garantía de fábrica.</li>
-            <li>Si el problema persiste, evaluamos el equipo sin costo adicional.</li>
-        </ul>
-    </section>
-
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="servicios-container">
-            <div class="servicio">
-                <h3>Reparación de hardware</h3>
-                <p>Diagnóstico y reparación de componentes dañados: placas madre, discos duros, memorias RAM, fuentes de poder y más.</p>
-            </div>
-            <div class="servicio">
-                <h3>Mantenimiento preventivo</h3>
-                <p>Limpieza de ventiladores, aplicación de pasta térmica, revisión de componentes y limpieza interna y externa.</p>
-            </div>
-            <div class="servicio">
-                <h3>Optimización de software</h3>
-                <p>Eliminación de archivos innecesarios, ajustes avanzados y mejora del rendimiento.</p>
-            </div>
-            <div class="servicio">
-                <h3>Instalación de sistemas operativos</h3>
-                <p>Instalación y configuración de Windows, Linux y otros sistemas operativos según tus necesidades.</p>
-            </div>
-            <div class="servicio">
-                <h3>Reemplazo de teclados y pantallas</h3>
-                <p>Cambio de pantallas dañadas y teclados defectuosos para portátiles.</p>
-            </div>
+    
+    <!-- Nosotros -->
+    <section id="nosotros" class="py-16 bg-white text-center px-6">
+        <div class="container mx-auto max-w-3xl">
+            <h2 class="text-3xl font-bold text-primario">Sobre Nosotros</h2>
+            <p class="text-lg text-gray-600 mt-4">QuilpuéFix se fundó el 25 de octubre de 2024 con el objetivo de hacer realidad un gran sueño: llevar a cabo mi primer emprendimiento, gestionar su contabilidad y administración, y sobre todo, poner en práctica mis conocimientos sobre computadoras.</p>
+            <p class="text-lg text-gray-600 mt-4">Desde pequeño, fui un apasionado de la tecnología, siguiendo a cientos de youtubers dedicados a la reparación e innovación en este mundo. Me capacité con cursos en "MasterMind", impartidos por el reconocido Profesional e Influencer Nate Gentile.</p>
+            <p class="text-lg text-gray-600 mt-4">En QuilpuéFix buscamos ofrecer precios accesibles sin sacrificar calidad. Nos enfocamos en la transparencia, explicando cada paso del proceso, registrando cada trabajo y evitando malas prácticas como la piratería, el maltrato de equipos o el robo de piezas, problemas comunes en algunos servicios técnicos. Nuestra misión es transmitir confianza y brindar un trato profesional con calidez familiar.</p>
         </div>
     </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <a href="mailto:quilpuefix@outlook.com" class="btn contacto"><i class="fas fa-envelope"></i> 💌 Contactar Soporte</a>
-    </section>
-
-    <div class="whatsapp-chat">
-        <a href="https://wa.me/56973196767?text=Hola%2C%20quiero%20reservar%20una%20cita%20para%20reparar%20mi%20computadora." target="_blank">
-            <img src="logo.whatsapp.png" alt="WhatsApp">
-        </a>
+    
+    <!-- Servicios -->
+    <section id="servicios" class="py-16 text-center">
+        <h2 class="text-3xl font-bold text-primario">Nuestros Servicios</h2>
+        <p class="text-lg text-gray-600 mt-2">Soluciones rápidas y profesionales para tu equipo.</p>
+        <div class="grid md:grid-cols-3 gap-8 mt-8 container mx-auto px-6">
+            
+            <!-- Card 1 -->
+            <div class="bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-primario">Reemplazo de Hardware</h3>
+                <p class="text-gray-600 mt-2">Diagnóstico y reemplazo de componentes dañados.</p>
+                <p class="text-lg font-bold text-secundario mt-3">Desde $10.000 CLP</p>
+                <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Solicitar</a>
+            </div>
+            
+            <!-- Card 2 -->
+            <div class="bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-primario">Mantenimiento Preventivo</h3>
+                <p class="text-gray-600 mt-2">Limpieza y optimización para un mejor rendimiento.</p>
+                <p class="text-lg font-bold text-secundario mt-3">$15.000 CLP</p>
+                <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Agendar</a>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="bg-white shadow-lg p-6 rounded-lg">
+                <h3 class="text-xl font-semibold text-primario">Optimización de Software</h3>
+                <p class="text-gray-600 mt-2">Eliminación de archivos innecesarios y ajustes avanzados.</p>
+                <p class="text-lg font-bold text-secundario mt-3">$12.000 CLP</p>
+                <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Optimizar</a>
+            </div>
+        </div>
+        <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+        <div class="reviews-container" id="reseñas">
+            <div style="height: 40px;"></div>
+            <h2 class="reviews-title">Opiniones de Nuestros Clientes</h2>
+            <p class="reviews-description">
+                Descubre lo que dicen nuestros clientes sobre nuestros servicios de reparación y mantenimiento.  
+                Tu satisfacción es nuestra prioridad.
+            </p>
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-37ad1367-ba77-4fd0-8b75-1b51aa17a52b" data-elfsight-app-lazy></div>
+        </div>        
+        <!-- Métodos de Pago -->
+        <section id="pagos" class="py-16 bg-gray-100 text-center px-6">
+            <div class="container mx-auto max-w-3xl">
+                <h2 class="text-3xl font-bold text-primario">Métodos de Pago</h2>
+                <p class="text-lg text-gray-600 mt-4">Actualmente aceptamos los siguientes métodos de pago:</p>
+    
+                <div class="grid md:grid-cols-2 gap-8 mt-8">
+                    
+                    <!-- Efectivo -->
+                    <div class="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center">
+                        <i class="fas fa-money-bill-wave text-green-500 text-4xl"></i>
+                        <h3 class="text-xl font-semibold text-primario mt-3">Efectivo</h3>
+                        <p class="text-gray-600 mt-2">Puedes pagar directamente al recibir tu equipo.</p>
+                    </div>
+    
+                    <!-- Transferencia Bancaria -->
+                    <div class="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center">
+                        <i class="fas fa-university text-blue-500 text-4xl"></i>
+                        <h3 class="text-xl font-semibold text-primario mt-3">Transferencia Bancaria</h3>
+                        <p class="text-gray-600 mt-2">Te proporcionaremos los datos para realizar la transferencia.</p>
+                    </div>
+    
+                </div>
+    
+                <!-- Mensaje de contacto -->
+                <p class="text-lg text-gray-600 mt-6">Si tienes dudas sobre los métodos de pago, <a href="https://wa.me/56973196767" class="text-secundario font-bold hover:underline">contáctanos por WhatsApp</a>.</p>
+            </div>
+        </section>
+<!-- Trabajos Realizados -->
+<section id="trabajos" class="py-16 text-center bg-white px-6">
+    <div class="container mx-auto max-w-3xl">
+        <h2 class="text-3xl font-bold text-primario">Trabajos Realizados</h2>
+        <p class="text-lg text-gray-600 mt-4">Aquí puedes ver algunos de nuestros trabajos recientes en reparación y mantenimiento de computadoras.</p>
+        
+        <div class="grid md:grid-cols-2 gap-8 mt-8">
+            <!-- Video 1 -->
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.instagram.com/p/DDIPNN5yJvJ/embed" class="w-full h-64 rounded-lg shadow-lg" allowfullscreen></iframe>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.instagram.com/p/DEYT8BAyPyh/embed" class="w-full h-64 rounded-lg shadow-lg" allowfullscreen></iframe>
+            </div>
+            <!-- Video 3 -->
+                <div class="aspect-w-16 aspect-h-9">
+            <iframe src="https://www.instagram.com/p/DCLW4aPtH6c/embed" class="w-full h-64 rounded-lg shadow-lg" allowfullscreen></iframe>
+            </div>
+            <!-- Video 4 -->
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.instagram.com/p/DCZxGZfq-eR/embed" class="w-full h-64 rounded-lg shadow-lg" allowfullscreen></iframe>
+                </div>            
+        </div>
     </div>
-
+    </section>
+    <!-- FAQ -->
+    <section id="faq">
+        <h2>Preguntas Frecuentes</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">📌 ¿Cuáles son los servicios que ofrecen? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Ofrecemos reparación y mantenimiento de computadoras o consolas, instalación de software, limpieza interna, optimización de rendimiento y más.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">✅ ¿Tienen garantía en los servicios?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <li>Garantía de 30 días para reparaciones y mantenimiento.</li>
+                    <li>Garantía de 3 meses en repuestos nuevos (según el fabricante). </li>
+                    <p>Si el problema vuelve a ocurrir dentro del período de garantía, lo solucionamos sin costo adicional.</p>
+                </div>
+                </div>
+            <div class="faq-item">
+                <button class="faq-question">⏳ ¿Cuánto tiempo tarda una reparación? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Depende del tipo de reparación. Diagnósticos básicos se realizan en 24 horas, mientras que reparaciones más complejas pueden tardar de 2 a 5 días hábiles.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">💰 ¿Cuándo debo pagar por el servicio?<i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>El pago se realiza una vez finalizada la reparación y confirmada la solución del problema.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">💳 ¿Qué métodos de pago aceptan? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Aceptamos Efectivo, Transferencia bancaria (BancoEstado, Santander, Banco de Chile) o Mercado Pago (para pagos con tarjeta de débito o crédito)</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">📍 ¿Dónde están ubicados? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Estamos ubicados en Quilpué, Chile. Atendemos con previa cita.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">🔒 ¿Es seguro dejar mi equipo? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Sí, trabajamos con total transparencia y profesionalismo. Antes de realizar cualquier cambio en el equipo, te informamos y solicitamos tu aprobación. Además, respetamos tu privacidad, por lo que no accedemos a tus archivos personales sin tu autorización.</p>
+                </div>
+            </div>
+    
+            <div class="faq-item">
+                <button class="faq-question">📞 ¿Cómo puedo agendar un servicio? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Puedes agendar a través de nuestro WhatsApp y Correo o, a través de nuestro Instagram @quilpuefix.cl</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- Footer -->
     <footer>
-        <p>Síguenos en nuestras redes:</p>
-        <a href="https://www.instagram.com/quilpuefix.cl/">Instagram</a>
-        <a href="https://www.facebook.com/profile.php?id=61565732085481">Facebook</a>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h2>QuilpuéFix</h2>
+                <p>Reparación y mantenimiento de computadoras con servicio confiable y profesional.</p>
+            </div>
+    
+            <div class="footer-section contact">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Quilpué, Chile</p>
+                <p><i class="fas fa-envelope"></i> quilpuefix@outlook.com</p>
+                <p><i class="fas fa-phone"></i> +56 9 1234 5678</p>
+            </div>
+    
+            <div class="footer-section links">
+                <h3>Enlaces Rápidos</h3>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#faq">Preguntas Frecuentes</a></li>
+                    <li><a href="#pagos">Métodos de Pago</a></li>
+                    <li><a href="#reseñas">Reseñas</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section social">
+                <h3>Síguenos</h3>
+                <a href="https://web.facebook.com/profile.php?id=61565732085481" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/quilpuefix.cl/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 QuilpuéFix. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 </html>

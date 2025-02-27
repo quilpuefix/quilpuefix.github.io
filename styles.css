@@ -1,216 +1,154 @@
-/* Paleta de colores de QuilpueFix */
-:root {
-    --fondo: #f4f7f3;
-    --primario: #3d5a80;
-    --secundario: #98c1d9;
-    --texto: #293241;
-    --boton-hover: #e0fbfc;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--fondo);
-    color: var(--texto);
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: var(--primario);
-    padding: 15px;
-    color: white;
+/* Reseñas */
+.reviews-container {
     text-align: center;
+    padding: 40px 0;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
+.reviews-title {
+    font-size: 28px;
     font-weight: bold;
+    color: #1E2A38; /* Ajusta según la paleta de QuilpuéFix */
+    margin-bottom: 10px;
 }
 
-.hero {
-    text-align: center;
-    padding: 50px 20px;
+.reviews-description {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-bottom: 20px;
 }
 
-.hero h1 {
-    color: var(--primario);
-}
 
-.hero .btn {
-    background-color: var(--primario);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
-}
-
-.hero .btn:hover {
-    background-color: var(--boton-hover);
-    color: var(--texto);
-}
-
-/* Secciones generales */
-section {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* Estilo para la sección "Nosotros" */
-#nosotros {
-    background-color: var(--secundario);
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-/* Estilo para Misión y Visión */
-#mision-vision h3 {
-    color: var(--primario);
-    margin-top: 20px;
-}
-
-#mision-vision p {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* Preguntas Frecuentes (FAQ) */
+/* Sección FAQ */
 #faq {
-    background-color: var(--fondo);
+    max-width: 800px;
+    margin: auto;
     padding: 40px 20px;
+    text-align: center;
 }
 
-#faq details {
-    background-color: var(--secundario);
+#faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.faq-container {
+    text-align: left;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    margin: 10px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
     padding: 15px;
-    border-radius: 10px;
-    margin: 10px auto;
-    max-width: 600px;
+    font-size: 1.1rem;
+    background: #ffffff;
+    border: none;
     cursor: pointer;
-}
-
-#faq details summary {
-    font-weight: bold;
-    color: var(--texto);
-}
-
-#faq details p {
-    margin-top: 10px;
-}
-
-/* Garantía y Políticas */
-#garantia {
-    background-color: var(--secundario);
-    padding: 40px 20px;
-    border-radius: 10px;
-    margin: 20px;
-}
-
-#garantia ul {
-    list-style: none;
-    padding: 0;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-#garantia ul li {
-    background-color: var(--fondo);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
     text-align: left;
-}
-
-/* Sección Servicios */
-#servicios {
-    text-align: center;
-}
-
-.servicios-container {
+    outline: none;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background 0.3s;
 }
 
-.servicio {
-    background-color: var(--secundario);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 300px;
-    text-align: left;
+.faq-question:hover {
+    background: #e9ecef;
 }
 
-/* Sección de Contacto */
-#contacto {
-    text-align: center;
-    padding: 40px 20px;
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
-.btn.contacto {
-    background-color: var(--primario);
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 10px;
+.faq-answer p {
+    margin: 0;
 }
 
-.btn.contacto:hover {
-    background-color: var(--boton-hover);
-    color: var(--texto);
+.faq-item.active .faq-answer {
+    display: block;
 }
 
-/* Botón de WhatsApp flotante */
-.whatsapp-chat {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+.faq-item.active .faq-question {
+    background: #e9ecef;
 }
 
-.whatsapp-chat img {
-    width: 60px;
-    height: 60px;
-    cursor: pointer;
-    transition: transform 0.3s;
-}
-
-.whatsapp-chat img:hover {
-    transform: scale(1.1);
-}
 
 /* Footer */
+
 footer {
-    background-color: var(--primario);
+    background: #3d5a80;
     color: white;
+    padding: 40px 0;
     text-align: center;
-    padding: 15px;
-    margin-top: 20px;
+    
 }
 
-footer a {
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    margin: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
 }
 
-footer a:hover {
+.footer-section ul li a:hover {
     text-decoration: underline;
+}
+
+.footer-section .social a {
+    font-size: 1.8rem;
+    margin: 0 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-section .social a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 0.9rem;
 }

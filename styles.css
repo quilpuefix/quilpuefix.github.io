@@ -1,3 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+}
+
 /* Reseñas */
 .reviews-container {
     text-align: center;
@@ -7,7 +27,7 @@
 .reviews-title {
     font-size: 28px;
     font-weight: bold;
-    color: #1E2A38; /* Ajusta según la paleta de QuilpuéFix */
+    color: #1E2A38;
     margin-bottom: 10px;
 }
 
@@ -16,7 +36,6 @@
     color: #4A4A4A;
     margin-bottom: 20px;
 }
-
 
 /* Sección FAQ */
 #faq {
@@ -84,15 +103,14 @@
     background: #e9ecef;
 }
 
-
 /* Footer */
-
 footer {
     background: #3d5a80;
     color: white;
     padding: 40px 0;
     text-align: center;
-    
+    width: 100%;
+    margin-top: auto; /* Empuja el footer hacia la parte inferior si el contenido es corto */
 }
 
 .footer-container {
@@ -147,7 +165,6 @@ footer {
 }
 
 .footer-bottom {
-    margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
     font-size: 0.9rem;

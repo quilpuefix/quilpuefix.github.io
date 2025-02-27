@@ -1,0 +1,22 @@
+async function fetchReviews() {
+    const apiKey = "AIzaSyCvtjWkx8vnaROzj6q0PTb1cHbY19E7Hjo"; 
+    const placeId = "ChIJD6tncFLfiZYRygrHwCvgs5A";  
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews&key=${apiKey}`;
+    
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+      const reviews = data.result.reviews;
+
+      let reviewsHtml = "<h2>Reseñas de Google</h2>";
+      reviews.forEach(review => {
+        reviewsHtml += `<p><strong>${review.author_name}</strong>: ${review.rating}⭐</p><p>${review.text}</p>`;
+      });
+
+      document.getElementById("reviews").innerHTML = reviewsHtml;
+    } catch (error) {
+      console.error("Error al obtener las reseñas:", error);
+    }
+  }
+
+  fetchReviews();

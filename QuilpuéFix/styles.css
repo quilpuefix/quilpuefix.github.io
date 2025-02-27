@@ -1,0 +1,154 @@
+/* Reseñas */
+.reviews-container {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.reviews-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1E2A38; /* Ajusta según la paleta de QuilpuéFix */
+    margin-bottom: 10px;
+}
+
+.reviews-description {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-bottom: 20px;
+}
+
+
+/* Sección FAQ */
+#faq {
+    max-width: 800px;
+    margin: auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#faq h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.faq-container {
+    text-align: left;
+}
+
+.faq-item {
+    background: #f8f9fa;
+    margin: 10px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    background: #ffffff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #e9ecef;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    background: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.faq-answer p {
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+.faq-item.active .faq-question {
+    background: #e9ecef;
+}
+
+
+/* Footer */
+
+footer {
+    background: #3d5a80;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-section {
+    margin: 15px;
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h2,
+.footer-section h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.footer-section p,
+.footer-section ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .social a {
+    font-size: 1.8rem;
+    margin: 0 10px;
+    color: white;
+    transition: 0.3s;
+}
+
+.footer-section .social a:hover {
+    color: #f39c12;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-size: 0.9rem;
+}

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<lang="es">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuilpueFix - Reparación de Computadoras</title>
@@ -8,50 +7,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="main.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        fondo: '#f4f7f3',
-                        primario: '#3d5a80',
-                        secundario: '#98c1d9',
-                        texto: '#293241',
-                        botonHover: '#e0fbfc',
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-fondo text-texto">
-    
-    <!-- Navbar -->
-    <header class="bg-primario text-white py-4">
-        <nav class="container mx-auto flex justify-between items-center px-4">
-            <div class="text-xl font-bold">QuilpueFix</div>
-    
-            <!-- Botón hamburguesa (solo en móviles) -->
-            <button id="menu-toggle" class="md:hidden text-white text-2xl focus:outline-none">
-                <i id="menu-icon" class="fas fa-bars"></i>
-            </button>
-    
-            <!-- Menú de navegación -->
-            <ul id="nav-menu" class="hidden flex-col absolute top-16 left-0 w-full bg-primario md:bg-transparent md:static md:flex md:flex-row md:space-x-6 md:space-y-0 space-y-4 items-center text-center transition-all duration-300">
-                <li><a href="#servicios" class="hover:text-botonHover">Servicios</a></li>
-                <li><a href="#nosotros" class="hover:text-botonHover">Nosotros</a></li>
-                <li><a href="#reseñas" class="hover:text-botonHover">Reseñas</a></li>
-                <li><a href="#pagos" class="hover:text-botonHover">Métodos de Pago</a></li>
-                <li><a href="#trabajos" class="hover:text-botonHover">Trabajos</a></li>
-                <li><a href="#faq" class="hover:text-botonHover">(FAQ)</a></li>
-                <li><a href="https://wa.me/56973196767" class="bg-secundario text-white px-4 py-2 rounded hover:bg-botonHover">WhatsApp</a></li>
-            </ul>
-        </nav>
-    </header>
-        
-    </header>
-    
-    <!-- Hero -->
+    <script src="tailwind.config.js"></script>
+<nav class="bg-primario text-white py-4">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      
+<!-- NavBar / Menú de Navegación -->  
+      
+      <!-- Logo de la empresa -->
+      <div>
+        <a href="index.html" class="text-2xl font-bold text-botonHover">QuilpueFix</a>
+      </div>
+      
+      <!-- Enlaces del navbar para pantallas grandes -->
+      <div class="hidden md:flex space-x-8">
+        <a href="#nosotros" class="hover:text-botonHover">Nosotros</a>
+        <a href="#servicios" class="hover:text-botonHover">Servicios</a>
+        <a href="#reseñas" class="hover:text-botonHover">Reseñas</a>
+        <a href="#metodos-pago" class="hover:text-botonHover">Métodos de Pago</a>
+        <a href="#trabajos" class="hover:text-botonHover">Trabajos</a>
+        <a href="#faq" class="hover:text-botonHover">FAQ</a>
+      </div>
+      
+      <!-- Botón para el menú móvil -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-button" class="text-white focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Menú móvil (oculto por defecto) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-primario text-white px-4 py-2 space-y-4">
+      <a href="#nosotros" class="block hover:text-botonHover">Nosotros</a>
+      <a href="#reseñas" class="block hover:text-botonHover">Reseñas</a>
+      <a href="#metodos-pago" class="block hover:text-botonHover">Métodos de Pago</a>
+      <a href="#trabajos" class="block hover:text-botonHover">Trabajos</a>
+      <a href="#faq" class="block hover:text-botonHover">FAQ</a>
+    </div>
+  </nav>
+  
+<!-- Hero -->
     <section class="text-center py-20 bg-secundario text-white">
         <h1 class="text-4xl font-bold">Reparación y Mantenimiento de Computadoras</h1>
         <p class="text-lg mt-4">Soluciones rápidas y eficientes para tu equipo.</p>
@@ -63,12 +60,12 @@
         <div class="container mx-auto max-w-3xl">
             <h2 class="text-3xl font-bold text-primario">Sobre Nosotros</h2>
             <p class="text-lg text-gray-600 mt-4">QuilpuéFix se fundó el 25 de octubre de 2024 con el objetivo de hacer realidad un gran sueño: llevar a cabo mi primer emprendimiento, gestionar su contabilidad y administración, y sobre todo, poner en práctica mis conocimientos sobre computadoras.</p>
-            <p class="text-lg text-gray-600 mt-4">Desde pequeño, fui un apasionado de la tecnología, siguiendo a cientos de youtubers dedicados a la reparación e innovación en este mundo. Me capacité con cursos en "MasterMind", impartidos por el reconocido Profesional e Influencer Nate Gentile.</p>
+            <p class="text-lg text-gray-600 mt-4">Desde pequeño, fui un apasionado de la tecnología, siguiendo a cientos de creadores de contenido dedicados a la reparación e innovación en este mundo. Me capacité con cursos en "MasterMind", empresa creada por el reconocido profesional e influencer Nate Gentile.</p>
             <p class="text-lg text-gray-600 mt-4">En QuilpuéFix buscamos ofrecer precios accesibles sin sacrificar calidad. Nos enfocamos en la transparencia, explicando cada paso del proceso, registrando cada trabajo y evitando malas prácticas como la piratería, el maltrato de equipos o el robo de piezas, problemas comunes en algunos servicios técnicos. Nuestra misión es transmitir confianza y brindar un trato profesional con calidez familiar.</p>
         </div>
     </section>
     
-    <!-- Servicios -->
+<!-- Servicios -->
     <section id="servicios" class="py-16 text-center">
         <h2 class="text-3xl font-bold text-primario">Nuestros Servicios</h2>
         <p class="text-lg text-gray-600 mt-2">Soluciones rápidas y profesionales para tu equipo.</p>
@@ -78,7 +75,7 @@
             <div class="bg-white shadow-lg p-6 rounded-lg">
                 <h3 class="text-xl font-semibold text-primario">Reemplazo de Hardware</h3>
                 <p class="text-gray-600 mt-2">Diagnóstico y reemplazo de componentes dañados.</p>
-                <p class="text-lg font-bold text-secundario mt-3">Desde $10.000 CLP</p>
+                <p class="text-lg font-bold text-secundario mt-3">Desde $10.000 CLP | IVA Incluído.</p>
                 <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Agendar Reemplazo</a>
             </div>
             
@@ -86,7 +83,7 @@
             <div class="bg-white shadow-lg p-6 rounded-lg">
                 <h3 class="text-xl font-semibold text-primario">Mantenimiento Preventivo</h3>
                 <p class="text-gray-600 mt-2">Limpieza y optimización para un mejor rendimiento.</p>
-                <p class="text-lg font-bold text-secundario mt-3">$20.000 CLP</p>
+                <p class="text-lg font-bold text-secundario mt-3">$20.000 CLP | IVA Incluído.</p>
                 <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Agendar Mantenimiento</a>
             </div>
             
@@ -94,14 +91,14 @@
             <div class="bg-white shadow-lg p-6 rounded-lg">
                 <h3 class="text-xl font-semibold text-primario">Instalación de S.O</h3>
                 <p class="text-gray-600 mt-2">Instalación rápida y segura del sistema operativo de tu preferencia.</p>
-                <p class="text-lg font-bold text-secundario mt-3">Desde $15.000 CLP</p>
+                <p class="text-lg font-bold text-secundario mt-3">Desde $15.000 CLP | IVA Incluído.</p>
                 <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Agendar Instalación</a>
             </div>
             <!-- Card 4 -->
             <div class="bg-white shadow-lg p-6 rounded-lg">
                 <h3 class="text-xl font-semibold text-primario">Optimización de Software</h3>
                 <p class="text-gray-600 mt-2">Eliminación de archivos innecesarios y ajustes avanzados.</p>
-                <p class="text-lg font-bold text-secundario mt-3">$12.000 CLP</p>
+                <p class="text-lg font-bold text-secundario mt-3">$12.000 CLP | IVA Incluído.</p>
                 <a href="https://wa.me/56973196767" class="mt-4 inline-block bg-primario text-white px-4 py-2 rounded hover:bg-botonHover">Agendar Optimizar</a>
             </div>
         </div>
@@ -117,8 +114,9 @@
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
             <div class="elfsight-app-37ad1367-ba77-4fd0-8b75-1b51aa17a52b" data-elfsight-app-lazy></div>
         </div>        
-        <!-- Métodos de Pago -->
-        <section id="pagos" class="py-16 bg-gray-100 text-center px-6">
+
+    <!-- Métodos de Pago -->
+        <section id="metodos-pago" class="py-16 bg-gray-100 text-center px-6">
             <div class="container mx-auto max-w-3xl">
                 <h2 class="text-3xl font-bold text-primario">Métodos de Pago</h2>
                 <p class="text-lg text-gray-600 mt-4">Actualmente aceptamos los siguientes métodos de pago:</p>
@@ -145,7 +143,9 @@
                 <p class="text-lg text-gray-600 mt-6">Si tienes dudas sobre los métodos de pago, <a href="https://wa.me/56973196767" class="text-secundario font-bold hover:underline">contáctanos por WhatsApp</a>.</p>
             </div>
         </section>
+
 <!-- Trabajos Realizados -->
+
 <section id="trabajos" class="py-16 text-center bg-white px-6">
     <div class="container mx-auto max-w-3xl">
         <h2 class="text-3xl font-bold text-primario">Trabajos Realizados</h2>
@@ -174,12 +174,18 @@
     </section>
     <!-- FAQ -->
     <section id="faq">
-        <h2>Preguntas Frecuentes</h2>
+        <h2>Preguntas Frecuentes (FAQ)</h2>
         <div class="faq-container">
             <div class="faq-item">
                 <button class="faq-question">📌 ¿Cuáles son los servicios que ofrecen? <i class="fas fa-chevron-down"></i></button>
                 <div class="faq-answer">
                     <p>Ofrecemos reparación y mantenimiento de computadoras o consolas, instalación de software, limpieza interna, optimización de rendimiento y más.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">🧾 ¿Emiten boleta? <i class="fas fa-chevron-down"></i></button>
+                <div class="faq-answer">
+                    <p>Sí, emitimos boleta de honorarios por nuestros servicios técnicos y de asesoría, estas se envian a través de correo electrónico..</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -230,42 +236,49 @@
             </div>
         </div>
     </section>    
+</section>
     <!-- Footer -->
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section about">
-                <h2>QuilpuéFix</h2>
-                <p>Reparación y mantenimiento de computadoras con servicio confiable y profesional.</p>
-            </div>
     
-            <div class="footer-section contact">
-                <h3>Contacto</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Quilpué, Chile</p>
-                <p><i class="fas fa-envelope"></i> quilpuefix@outlook.com</p>
-                <p><i class="fas fa-phone"></i> +56 9 1234 5678</p>
-            </div>
-    
-            <div class="footer-section links">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#faq">Preguntas Frecuentes</a></li>
-                    <li><a href="#pagos">Métodos de Pago</a></li>
-                    <li><a href="#reseñas">Reseñas</a></li>
-                </ul>
-            </div>
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section social">
-                <h3>Síguenos</h3>
-                <a href="https://web.facebook.com/profile.php?id=61565732085481" target="_blank"><i class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/quilpuefix.cl/" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/56912345678" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            </div>
+    <footer class="bg-primario text-white py-10">
+        <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Logo + Descripción -->
+          <div>
+            <h2 class="text-2xl font-bold">QuilpueFix</h2>
+            <p class="text-sm mt-2 text-gray-200">
+              Reparación de equipos, optimización de rendimiento y soluciones confiables en Quilpué. Atención rápida y personalizada.
+            </p>
+          </div>
+      
+          <!-- Enlaces -->
+          <div>
+            <h3 class="text-sm font-semibold uppercase">Enlaces</h3>
+            <ul class="mt-4 space-y-2">
+              <li><a href="#nosotros" class="hover:text-secundario">Nosotros</a></li>
+              <li><a href="#reseñas" class="hover:text-secundario">Reseñas</a></li>
+              <li><a href="#metodos-pago" class="hover:text-secundario">Métodos de Pago</a></li>
+              <li><a href="#trabajos" class="hover:text-secundario">Trabajos</a></li>
+              <li><a href="#faq" class="hover:text-secundario">FAQ</a></li>
+            </ul>
+          </div>
+      
+          <!-- Contacto -->
+          <div>
+            <h3 class="text-sm font-semibold uppercase">Contacto</h3>
+            <ul class="mt-4 text-sm space-y-2 text-gray-200">
+              <li>Email: <a href="mailto:contacto@quilpuefix.cl" class="hover:text-secundario">quilpuefix@outlook.com</a></li>
+              <li>WhatsApp: <a href="https://wa.me/56912345678" class="hover:text-secundario">+56 9 7319 6767</a></li>
+              <li>Ubicación: Quilpué, Chile</li>
+            </ul>
+          </div>
+      
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 QuilpuéFix. Todos los derechos reservados.</p>
+      
+        <!-- Línea inferior -->
+        <div class="mt-10 border-t border-gray-700 pt-4 text-center text-xs text-gray-400">
+          © 2025 QuilpueFix. Todos los derechos reservados.
         </div>
-    </footer>
+      </footer>
+      
 </body>
 </html>

@@ -37,6 +37,25 @@ html, body {
     margin-bottom: 20px;
 }
 
+/* Servicios */
+.accordion-content {
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+.accordion-content.active {
+    max-height: 500px;
+}
+
+/* Trabajos realizados */
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
 /* Sección FAQ */
 #faq {
     max-width: 800px;

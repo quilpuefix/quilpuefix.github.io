@@ -37,3 +37,33 @@ document.addEventListener("DOMContentLoaded", function () {
             const menu = document.getElementById("mobile-menu");
             menu.classList.toggle("hidden"); // Alterna la clase 'hidden' para mostrar/ocultar el menú
           });
+
+// Servicios
+function toggleAccordion(service) {
+    const element = document.getElementById(service);
+    element.classList.toggle("hidden");
+    element.classList.toggle("active");
+}
+
+// Trabajos realizados
+
+function scrollTrabajos(direction) {
+    const container = document.getElementById('trabajos-container');
+    const scrollAmount = 300; // Ajusta según el ancho de tus tarjetas
+    container.scrollBy({
+        left: direction * scrollAmount,
+        behavior: 'smooth'
+    });
+}
+
+function scrollToTrabajo(index) {
+    const container = document.getElementById('trabajos-container');
+    const cards = container.querySelectorAll('.flex-shrink-0');
+    if (cards[index]) {
+        cards[index].scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center'
+        });
+    }
+}

@@ -1,55 +1,113 @@
 <!DOCTYPE html>
 <lang="es">
+<head>
+    <!-- Metadatos básicos -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QuilpueFix - Reparación y mantenimiento de computadoras</title>
-    <meta name="description" content="QuilpueFix ofrece servicios de reparación y mantenimiento de computadoras, con atención personalizada y precios accesibles en Quilpué.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO -->
+    <title>QuilpueFix - Reparación y Mantenimiento de Computadoras en Quilpué</title>
+    <meta name="description" content="Servicio técnico especializado en reparación de computadoras, notebooks y consolas. Garantía, precios accesibles y atención personalizada en Quilpué.">
+    
+    <!-- Preconexiones para mejor performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" 
+          integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" 
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <script src="main.js"></script>
     <script src="tailwind.config.js"></script>
-<nav class="bg-primario text-white py-4">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-      
+    
+    <!-- Alpine JS -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Metadatos Open Graph (Redes Sociales) -->
+    <meta property="og:title" content="QuilpueFix - Reparación de Computadoras en Quilpué">
+    <meta property="og:description" content="Servicio técnico especializado con garantía. Reparamos tu computadora, notebook o consola.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.quilpuefix.github.io">
+    <meta property="og:image" content="https://www.quilpuefix.github.io/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+    
 <!-- NavBar / Menú de Navegación -->  
       
-      <!-- Logo de la empresa -->
-      <div>
-        <a href="index.html" class="text-2xl font-bold text-botonHover">QuilpueFix</a>
-      </div>
-      
-      <!-- Enlaces del navbar para pantallas grandes -->
-      <div class="hidden md:flex space-x-8">
-        <a href="#nosotros" class="hover:text-botonHover">Nosotros</a>
-        <a href="#servicios" class="hover:text-botonHover">Servicios</a>
-        <a href="#reseñas" class="hover:text-botonHover">Reseñas</a>
-        <a href="#metodos-pago" class="hover:text-botonHover">Métodos de Pago</a>
-        <a href="#trabajos" class="hover:text-botonHover">Trabajos</a>
-        <a href="#faq" class="hover:text-botonHover">FAQ</a>
-        <a href="direccion" class="block hover:text-botonHover">Dirección</a>
-      </div>
-      
-      <!-- Botón para el menú móvil -->
-      <div class="md:hidden flex items-center">
-        <button id="mobile-menu-button" class="text-white focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
-      </div>
+<nav class="bg-primario text-white shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+            <!-- Logo -->
+            <div class="flex-shrink-0 flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-botonHover hover:text-white transition-colors flex items-center">
+                    <i class="fas fa-tools mr-2"></i>
+                    QuilpueFix
+                </a>
+            </div>
+
+            <!-- Menú desktop (hidden en mobile) -->
+            <div class="hidden md:flex items-center space-x-8">
+                <div class="flex space-x-8">
+                    <a href="#servicios" class="px-1 py-2 text-sm font-medium hover:text-botonHover transition-colors border-b-2 border-transparent hover:border-secundario">
+                        Servicios
+                    </a>
+                    <a href="#trabajos" class="px-1 py-2 text-sm font-medium hover:text-botonHover transition-colors border-b-2 border-transparent hover:border-secundario">
+                        Trabajos
+                    </a>
+                    <a href="#nosotros" class="px-1 py-2 text-sm font-medium hover:text-botonHover transition-colors border-b-2 border-transparent hover:border-secundario">
+                        Nosotros
+                    </a>
+                    <a href="#reseñas" class="px-1 py-2 text-sm font-medium hover:text-botonHover transition-colors border-b-2 border-transparent hover:border-secundario">
+                        Reseñas
+                    </a>
+                </div>
+                <a href="https://wa.me/56973196767" class="ml-4 bg-secundario hover:bg-botonHover text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center">
+                    <i class="fab fa-whatsapp mr-2"></i> Contacto
+                </a>
+            </div>
+
+            <!-- Botón mobile -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-button" class="text-white hover:text-botonHover focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
     </div>
-  
-    <!-- Menú móvil (oculto por defecto) -->
-    <div id="mobile-menu" class="md:hidden hidden bg-primario text-white px-4 py-2 space-y-4">
-      <a href="#nosotros" class="block hover:text-botonHover">Nosotros</a>
-      <a href="#reseñas" class="block hover:text-botonHover">Reseñas</a>
-      <a href="#metodos-pago" class="block hover:text-botonHover">Métodos de Pago</a>
-      <a href="#trabajos" class="block hover:text-botonHover">Trabajos</a>
-      <a href="#faq" class="block hover:text-botonHover">FAQ</a>
-      <a href="direccion" class="block hover:text-botonHover">Dirección</a>
+
+    <!-- Menú mobile (hidden por defecto) -->
+    <div id="mobile-menu" class="md:hidden hidden bg-primario-darker">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <a href="#servicios" class="block px-3 py-2 text-base font-medium hover:text-botonHover hover:bg-primario-darker rounded-md transition-colors">
+                Servicios
+            </a>
+            <a href="#trabajos" class="block px-3 py-2 text-base font-medium hover:text-botonHover hover:bg-primario-darker rounded-md transition-colors">
+                Trabajos
+            </a>
+            <a href="#nosotros" class="block px-3 py-2 text-base font-medium hover:text-botonHover hover:bg-primario-darker rounded-md transition-colors">
+                Nosotros
+            </a>
+            <a href="#reseñas" class="block px-3 py-2 text-base font-medium hover:text-botonHover hover:bg-primario-darker rounded-md transition-colors">
+                Reseñas
+            </a>
+            <a href="https://wa.me/56973196767" class="block bg-secundario text-white px-4 py-2 rounded-lg text-base font-medium mt-2 mx-3 text-center">
+                <i class="fab fa-whatsapp mr-2"></i> Contactar
+            </a>
+        </div>
     </div>
-  </nav>
+</nav>
   
 <!-- Hero -->
     <section class="text-center py-20 bg-secundario text-white">
@@ -59,15 +117,64 @@
     </section>
     
     <!-- Nosotros -->
-    <section id="nosotros" class="py-16 bg-white text-center px-6">
-        <div class="container mx-auto max-w-3xl">
-            <h2 class="text-3xl font-bold text-primario">Sobre Nosotros</h2>
-            <p class="text-lg text-gray-600 mt-4">QuilpuéFix se fundó el 25 de octubre de 2024 con el objetivo de hacer realidad un gran sueño: llevar a cabo mi primer emprendimiento, gestionar su contabilidad y administración, y sobre todo, poner en práctica mis conocimientos sobre computadoras.</p>
-            <p class="text-lg text-gray-600 mt-4">Desde pequeño, fui un apasionado de la tecnología, siguiendo a cientos de creadores de contenido dedicados a la reparación e innovación en este mundo. Me capacité con cursos en "MasterMind", empresa creada por el reconocido profesional e influencer Nate Gentile.</p>
-            <p class="text-lg text-gray-600 mt-4">En QuilpuéFix buscamos ofrecer precios accesibles sin sacrificar calidad. Nos enfocamos en la transparencia, explicando cada paso del proceso, registrando cada trabajo y evitando malas prácticas como la piratería, el maltrato de equipos o el robo de piezas, problemas comunes en algunos servicios técnicos. Nuestra misión es transmitir confianza y brindar un trato profesional con calidez familiar.</p>
-        </div>
-    </section>
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primario">Nuestra Historia</h2>
+                <p class="text-lg text-gray-600 mt-2">Pasión por la tecnología, compromiso con la excelencia</p>
+            </div>
     
+            <div class="bg-fondo rounded-xl p-6 sm:p-8 shadow-sm">
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Columna izquierda (texto) -->
+                    <div class="md:w-2/3">
+                        <div class="prose prose-lg text-gray-600">
+                            <p class="font-medium text-primario">Fundado el 25 de octubre de 2024, QuilpuéFix nace de un sueño personal y una pasión de toda la vida por la tecnología.</p>
+                            
+                            <p>Desde mis primeros años, desarrollé una profunda fascinación por el mundo de la computación, siguiendo intensamente a expertos y creadores de contenido especializado. Esta pasión me llevó a capacitarme profesionalmente a través de los reconocidos cursos de <span class="font-semibold">MasterMind</span>, liderados por el destacado especialista Nate Gentile.</p>
+                            
+                            <div class="bg-botonHover/30 p-4 rounded-lg my-4 border-l-4 border-primario">
+                                <p class="font-medium">Nuestro compromiso:</p>
+                                <ul class="list-disc list-inside mt-2 space-y-1">
+                                    <li>Calidad profesional a precios accesibles</li>
+                                    <li>Transparencia absoluta en cada proceso</li>
+                                    <li>Trazabilidad documentada de todos los trabajos</li>
+                                    <li>Ética técnica: cero piratería, máximo respeto a los equipos</li>
+                                </ul>
+                            </div>
+                            
+                            <p>En QuilpuéFix combinamos conocimiento técnico especializado con un trato cercano y personalizado. Cada reparación es para nosotros una oportunidad de construir confianza y ofrecer soluciones reales que prolonguen la vida útil de tus dispositivos.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Columna derecha (elementos visuales temáticos) -->
+                    <div class="md:w-1/3 flex flex-col items-center justify-center space-y-6">
+                        <!-- Ícono de reparación -->
+                        <div class="bg-white p-6 rounded-full shadow-md border border-gray-100">
+                            <i class="fas fa-tools text-4xl text-primario"></i>
+                        </div>
+                        
+                        <!-- Tarjeta de servicios -->
+                        <div class="bg-white p-4 rounded-lg shadow-md border border-gray-100 w-full text-center">
+                            <div class="flex justify-center space-x-4 mb-3">
+                                <i class="fas fa-laptop-medical text-secundario text-xl"></i>
+                                <i class="fas fa-microchip text-primario text-xl"></i>
+                                <i class="fas fa-shield-alt text-secundario text-xl"></i>
+                            </div>
+                            <p class="text-sm font-medium text-gray-700">Especialistas en:</p>
+                            <p class="text-xs text-gray-600 mt-1">Reparación • Mantenimiento • Optimización</p>
+                        </div>
+                        
+                        <!-- CTA -->
+                        <a href="https://wa.me/56973196767" 
+                           class="inline-block w-full bg-primario hover:bg-secundario text-white text-center font-medium py-2 px-4 rounded-lg transition-colors mt-auto">
+                            <i class="fab fa-whatsapp mr-2"></i> Agenda tu diagnóstico
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>  
 <!-- Servicios -->
 <section id="servicios" class="py-16 bg-fondo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -248,10 +355,11 @@
                 <div>
                     <p class="font-medium">Todos los servicios incluyen:</p>
                     <ul class="list-disc list-inside">
-                        <li>Garantía de 12 días</li>
-                        <li>Boleta de honorarios (Servicios de Impuestos Internos)</li>
-                        <li>Retención de impuestos incluida</li>
-                        <li>Soporte técnico post-servicio</li>
+                        <li>Servicios a domicilio con recargo adicional de $5.000.</li>
+                        <li>Garantía de 12 días.</li>
+                        <li>Boleta de honorarios (Servicios de Impuestos Internos).</li>
+                        <li>Retención de impuestos incluida.</li>
+                        <li>Soporte técnico post-servicio.</li>
                     </ul>
                 </div>
             </div>
@@ -271,285 +379,463 @@
             <div class="elfsight-app-37ad1367-ba77-4fd0-8b75-1b51aa17a52b" data-elfsight-app-lazy></div>
         </div>        
 
-    <!-- Métodos de Pago -->
-        <section id="metodos-pago" class="py-16 bg-gray-100 text-center px-6">
-            <div class="container mx-auto max-w-3xl">
-                <h2 class="text-3xl font-bold text-primario">Métodos de Pago</h2>
-                <p class="text-lg text-gray-600 mt-4">Actualmente aceptamos los siguientes métodos de pago:</p>
-    
-                <div class="grid md:grid-cols-2 gap-8 mt-8">
-                    
-                    <!-- Efectivo -->
-                    <div class="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center">
-                        <i class="fas fa-money-bill-wave text-green-500 text-4xl"></i>
-                        <h3 class="text-xl font-semibold text-primario mt-3">Efectivo</h3>
-                        <p class="text-gray-600 mt-2">Puedes pagar directamente al recibir tu equipo.</p>
-                    </div>
-    
-                    <!-- Transferencia Bancaria -->
-                    <div class="bg-white shadow-lg p-6 rounded-lg flex flex-col items-center">
-                        <i class="fas fa-university text-blue-500 text-4xl"></i>
-                        <h3 class="text-xl font-semibold text-primario mt-3">Transferencia Bancaria</h3>
-                        <p class="text-gray-600 mt-2">Te proporcionaremos los datos para realizar la transferencia.</p>
-                    </div>
-    
+<!-- Sección Métodos de Pago - Versión Actualizada -->
+<section id="metodos-pago" class="py-16 bg-gray-50">
+    <div class="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <!-- Encabezado -->
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primario mb-3">Métodos de Pago</h2>
+            <p class="text-lg text-gray-600">Formas seguras de cancelar nuestros servicios técnicos</p>
+        </div>
+
+        <!-- Tarjetas de Métodos -->
+        <div class="grid md:grid-cols-3 gap-6">
+            <!-- Efectivo -->
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div class="bg-green-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-money-bill-wave text-green-500 text-2xl"></i>
                 </div>
-    
-                <!-- Mensaje de contacto -->
-                <p class="text-lg text-gray-600 mt-6">Emitimos boleta de honorarios por nuestros servicios técnicos y de asesoría, estas se envian a través de correo electrónico.</p>  
-                <p class="text-lg text-gray-600 mt-6">Si tienes dudas sobre los métodos de pago, <a href="https://wa.me/56973196767" class="text-secundario font-bold hover:underline">contáctanos por WhatsApp</a>.</p>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Efectivo</h3>
+                <p class="text-gray-500 text-sm mb-3">Pago directo al recibir tu equipo</p>
+                <span class="px-3 py-1 bg-green-50 text-green-600 text-xs font-medium rounded-full">Sin costo adicional</span>
             </div>
-        </section>
+
+            <!-- Transferencia -->
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div class="bg-blue-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <i class="fas fa-university text-blue-500 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Transferencia Bancaria</h3>
+                <p class="text-gray-500 text-sm mb-3">Datos bancarios al confirmar servicio</p>
+                <span class="px-3 py-1 bg-blue-50 text-blue-600 text-xs font-medium rounded-full">Sin comisión</span>
+            </div>
+
+            <!-- Mercado Pago -->
+            <div class="bg-white p-6 rounded-xl border border-gray-100 hover:shadow-md transition-shadow flex flex-col items-center text-center">
+                <div class="bg-sky-50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
+                    <i class="fab fa-cc-mastercard text-sky-500 text-2xl"></i>
+                </div>
+                <h3 class="text-lg font-semibold text-gray-800 mb-2">Mercado Pago</h3>
+                <p class="text-gray-500 text-sm mb-3">Tarjetas de crédito/débito vía link</p>
+                <span class="px-3 py-1 bg-sky-50 text-sky-600 text-xs font-medium rounded-full">Aceptamos cuotas</span>
+            </div>
+        </div>
+
+        <!-- Nota Legal -->
+        <div class="mt-10 bg-white p-6 rounded-lg border border-gray-200">
+            <div class="flex items-start">
+                <div class="flex-shrink-0 bg-secundario/10 p-2 rounded-lg">
+                    <i class="fas fa-file-invoice text-secundario text-xl"></i>
+                </div>
+                <div class="ml-4">
+                    <h3 class="font-semibold text-gray-800 mb-1">Documentación</h3>
+                    <p class="text-gray-600 text-sm">
+                        Emitimos <span class="font-medium">Boleta de Honorarios Electrónica</span> válida para garantías. 
+                        <span class="block mt-1 text-gray-500">* Nosotros asumimos la retención requerida por ley.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-10">
+            <p class="text-gray-600 mb-5">¿Tienes dudas sobre pagos o necesitas otra opción?</p>
+            <a href="https://wa.me/56973196767" class="inline-flex items-center bg-primario hover:bg-secundario text-white font-medium py-3 px-6 rounded-lg transition-colors">
+                <i class="fab fa-whatsapp mr-2 text-xl"></i> Consultar por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
 
 <!-- Trabajos Realizados -->
-
-<section id="trabajos" class="py-16 bg-white overflow-hidden">
+<section id="trabajos" class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-            <h2 class="text-3xl font-bold text-primario">Nuestros Trabajos Recientes</h2>
-            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Casos reales que demuestran nuestra experiencia técnica</p>
+            <h2 class="text-3xl font-bold text-primario">Transformación de Equipos</h2>
+            <p class="text-lg text-gray-600 mt-4 max-w-3xl mx-auto">Comparativa visual de antes y después de nuestros servicios</p>
         </div>
 
-        <!-- Contenedor horizontal con scroll -->
-        <div class="mt-12 relative">
-            <!-- Flechas de navegación -->
-            <button class="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-primario text-white p-3 rounded-full shadow-lg hover:bg-secundario transition-colors ml-4" onclick="scrollTrabajos(-1)">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-primario text-white p-3 rounded-full shadow-lg hover:bg-secundario transition-colors mr-4" onclick="scrollTrabajos(1)">
-                <i class="fas fa-chevron-right"></i>
-            </button>
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Tarjeta 1 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-secundario/10 flex items-center justify-center mr-3">
+                            <i class="fas fa-desktop text-secundario"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-primario">Mantenimiento PC Gamer</h3>
+                    </div>
+                    
+                    <!-- Contenedor de videos -->
+                    <div class="flex space-x-3 mb-4">
+                        <!-- Video ANTES -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="img/antes1.jpg"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="videos/mantencion-antes.MOV" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">ANTES</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Video DESPUÉS -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="img/despues1.jpg"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="videos/mantencion-despues.MOV" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">DESPUÉS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">Limpieza profunda de componentes, chasis y ventiladores.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">Cambio de pasta térmica premium.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+                        <span class="text-xs bg-gray-100 text-primario px-2 py-1 rounded-full">Garantía 30 días</span>
+                        <a href="https://www.instagram.com/p/DH1--l4AWmb/?img_index=3" class="text-xs font-medium text-primario hover:underline">Ver proceso completo →</a>
+                    </div>
+                </div>
+            </div>
 
-<!-- Galería horizontal -->
-<div class="flex overflow-x-auto pb-10 scrollbar-hide space-x-6 px-4" id="trabajos-container">
-    <!-- Tarjeta 1 -->
-    <div class="flex-shrink-0 w-96 bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-primario">
-        <div class="relative" style="height: 380px">  <!-- Altura aumentada -->
-            <iframe src="https://www.instagram.com/p/DDIPNN5yJvJ/embed" 
-                    class="w-full h-full object-cover"
-                    frameborder="0"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <span class="text-xs font-semibold text-white bg-primario px-2 py-1 rounded-full">GAMING</span>
-            </div>
-        </div>
-        <div class="p-5">
-            <div class="flex items-center mb-2">
-                <div class="w-10 h-10 rounded-full bg-secundario/10 flex items-center justify-center mr-3">
-                    <i class="fas fa-desktop text-secundario"></i>
+            <!-- Tarjeta 2 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-primario/10 flex items-center justify-center mr-3">
+                            <i class="fas fa-laptop text-primario"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-primario">Diagnóstico y Mantenimiento</h3>
+                    </div>
+                    
+                    <!-- Contenedor de videos -->
+                    <div class="flex space-x-3 mb-4">
+                        <!-- Video ANTES -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="img/antes2.jpg"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="videos/reparacion-mantencion-antes.MOV" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">ANTES</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Video DESPUÉS -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="videos/reparacion-mantencion-despues.JPG"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="videos/reparacion-mantencion-despues.JPG" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">DESPUÉS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">PC no prendía y se realiza diagnostico, fuente de poder dañada.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">Se realiza mantención completa, componentes, chasis y ventiladores.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+                        <span class="text-xs bg-gray-100 text-primario px-2 py-1 rounded-full">Garantia 30 días</span>
+                        <a href="#" class="text-xs font-medium text-primario hover:underline">Ver proceso completo →</a>
+                    </div>
                 </div>
-                <h3 class="font-bold text-lg text-primario">Mantenimiento Completo</h3>
             </div>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Limpieza profunda de componentes (CPU, GPU, RAM)</p>
+
+            <!-- Tarjeta 3 -->
+            <div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="p-5">
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 rounded-full bg-secundario/10 flex items-center justify-center mr-3">
+                            <i class="fas fa-keyboard text-secundario"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-primario">Mantenimiento PC Gaming</h3>
+                    </div>
+                    
+                    <!-- Contenedor de videos -->
+                    <div class="flex space-x-3 mb-4">
+                        <!-- Video ANTES -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="img/antes3.JPG"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="img/antes3.JPG" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">ANTES</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Video DESPUÉS -->
+                        <div class="flex-1">
+                            <div class="relative rounded-lg overflow-hidden" style="padding-bottom: 177.78%">
+                                <video class="absolute inset-0 w-full h-full object-cover bg-gray-200"
+                                       poster="img/despues3.JPG"
+                                       controls
+                                       muted
+                                       playsinline>
+                                    <source src="img/despues3.JPG" type="video/mp4">
+                                </video>
+                                <span class="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded">DESPUÉS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">Se realiza limpieza de componentes, chasis interno como externo, y sus ventiladores.</p>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
+                            <p class="text-sm text-gray-600">Se monitorea las temperaturas y realiza benchmarks para su buen funcionamiento.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
+                        <span class="text-xs bg-gray-100 text-primario px-2 py-1 rounded-full">Mejora en temperaturas.</span>
+                        <a href="#" class="text-xs font-medium text-primario hover:underline">Ver proceso completo →</a>
+                    </div>
                 </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Diagnóstico con benchmarks profesionales</p>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs bg-botonHover text-primario px-2 py-1 rounded-full">Garantía incluida</span>
-                <a href="#" class="text-xs font-medium text-primario hover:underline">Ver detalles →</a>
             </div>
         </div>
     </div>
-
-    <!-- Tarjeta 2 -->
-    <div class="flex-shrink-0 w-96 bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-secundario">
-        <div class="relative" style="height: 380px">  <!-- Altura aumentada -->
-            <iframe src="https://www.instagram.com/p/DEYT8BAyPyh/embed" 
-                    class="w-full h-full object-cover"
-                    frameborder="0"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <span class="text-xs font-semibold text-white bg-secundario px-2 py-1 rounded-full">NOTEBOOK</span>
-            </div>
-        </div>
-        <div class="p-5">
-            <div class="flex items-center mb-2">
-                <div class="w-10 h-10 rounded-full bg-primario/10 flex items-center justify-center mr-3">
-                    <i class="fas fa-laptop text-primario"></i>
-                </div>
-                <h3 class="font-bold text-lg text-primario">Notebook + Instalación S.O.</h3>
-            </div>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Instalación limpia de Windows 11 Pro</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Mantenimiento físico completo</p>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs bg-botonHover text-primario px-2 py-1 rounded-full">Documentos respaldados</span>
-                <a href="#" class="text-xs font-medium text-primario hover:underline">Ver detalles →</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tarjeta 3 -->
-    <div class="flex-shrink-0 w-96 bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-primario">
-        <div class="relative" style="height: 380px">  <!-- Altura aumentada -->
-            <iframe src="https://www.instagram.com/p/DCLW4aPtH6c/embed" 
-                    class="w-full h-full object-cover"
-                    frameborder="0"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <span class="text-xs font-semibold text-white bg-primario px-2 py-1 rounded-full">HARDWARE</span>
-            </div>
-        </div>
-        <div class="p-5">
-            <div class="flex items-center mb-2">
-                <div class="w-10 h-10 rounded-full bg-secundario/10 flex items-center justify-center mr-3">
-                    <i class="fas fa-keyboard text-secundario"></i>
-                </div>
-                <h3 class="font-bold text-lg text-primario">Reparación + Actualización</h3>
-            </div>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Actualización a Windows 11</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Reemplazo de teclado completo</p>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs bg-botonHover text-primario px-2 py-1 rounded-full">6 teclas reemplazadas</span>
-                <a href="#" class="text-xs font-medium text-primario hover:underline">Ver detalles →</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- Tarjeta 4 -->
-    <div class="flex-shrink-0 w-96 bg-white rounded-xl overflow-hidden hover:shadow-lg transition-all duration-300 border-l-4 border-secundario">
-        <div class="relative" style="height: 380px">  <!-- Altura aumentada -->
-            <iframe src="https://www.instagram.com/p/DH1--l4AWmb/embed" 
-                    class="w-full h-full object-cover"
-                    frameborder="0"
-                    allowfullscreen
-                    loading="lazy"></iframe>
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
-                <span class="text-xs font-semibold text-white bg-secundario px-2 py-1 rounded-full">PREVENTIVO</span>
-            </div>
-        </div>
-        <div class="p-5">
-            <div class="flex items-center mb-2">
-                <div class="w-10 h-10 rounded-full bg-primario/10 flex items-center justify-center mr-3">
-                    <i class="fas fa-shield-alt text-primario"></i>
-                </div>
-                <h3 class="font-bold text-lg text-primario">Mantenimiento Preventivo</h3>
-            </div>
-            <div class="space-y-3">
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Sin mantenimiento desde 2021</p>
-                </div>
-                <div class="flex items-start">
-                    <i class="fas fa-check-circle text-secundario mt-1 mr-2"></i>
-                    <p class="text-sm text-gray-600">Cambio de pasta térmica premium</p>
-                </div>
-            </div>
-            <div class="mt-4 pt-3 border-t border-gray-100 flex justify-between items-center">
-                <span class="text-xs bg-botonHover text-primario px-2 py-1 rounded-full">3 años sin mantenimiento</span>
-                <a href="#" class="text-xs font-medium text-primario hover:underline">Ver detalles →</a>
-            </div>
-        </div>
-    </div>
-</div>
 </section>
-
-                <!-- Puedes agregar más tarjetas según necesites -->
+<!-- Modal (debes implementar la funcionalidad JavaScript) -->
+<div id="trabajo-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div class="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <!-- Fondo oscuro -->
+        <div class="fixed inset-0 transition-opacity" aria-hidden="true">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+        </div>
+        <!-- Contenido del modal -->
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-2xl sm:w-full">
+            <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                <!-- El contenido se llenará dinámicamente con JavaScript -->
+            </div>
+            <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+                <button type="button" class="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" onclick="closeModal()">
+                    Cerrar
+                </button>
             </div>
         </div>
-
-        <!-- Indicadores (opcional) -->
-        <div class="flex justify-center mt-6 space-x-2">
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-primario" onclick="scrollToTrabajo(0)"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-primario" onclick="scrollToTrabajo(1)"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-primario" onclick="scrollToTrabajo(2)"></button>
-            <button class="w-3 h-3 rounded-full bg-gray-300 hover:bg-primario" onclick="scrollToTrabajo(3)"></button>
-        </div>
     </div>
-</section>
+</div>  
 
 <!-- JavaScript para el scroll horizontal -->
-<script>
 
-</script>
-
-<!-- Estilos para ocultar la barra de scroll (opcional) -->
-<style>
-
-</style>
-
-<!-- FAQ -->
-<section id="faq">
-    <h2>Preguntas Frecuentes (FAQ)</h2>
-    <div class="faq-container">
-        <div class="faq-item">
-            <button class="faq-question">📌 ¿Cuáles son los servicios que ofrecen? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Ofrecemos reparación y mantenimiento de computadoras o consolas, instalación de software, limpieza interna, optimización de rendimiento y más.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">✅ ¿Tienen garantía en los servicios?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <li>Garantía de 30 días para reparaciones y mantenimiento.</li>
-                <li>Garantía de 3 meses en repuestos nuevos (según el fabricante). </li>
-                <p>Si el problema vuelve a ocurrir dentro del período de garantía, lo solucionamos sin costo adicional.</p>
-            </div>
-            </div>
-        <div class="faq-item">
-            <button class="faq-question">⏳ ¿Cuánto tiempo tarda una reparación? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Depende del tipo de reparación. Diagnósticos básicos se realizan en 24 horas, mientras que reparaciones más complejas pueden tardar de 2 a 5 días hábiles.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">💰 ¿Cuándo debo pagar por el servicio?<i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>El pago se realiza una vez finalizada la reparación y confirmada la solución del problema.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">💳 ¿Qué métodos de pago aceptan? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Aceptamos Efectivo, Transferencia bancaria (BancoEstado, Santander, Banco de Chile) o Mercado Pago (para pagos con tarjeta de débito o crédito)</p>
-            </div>
+<!-- Sección FAQ - Versión Ultra Confiable -->
+<section id="faq" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primario">Preguntas Frecuentes</h2>
+            <p class="text-lg text-gray-600 mt-2">Resolvemos tus dudas de forma confiable</p>
         </div>
 
-        <div class="faq-item">
-            <button class="faq-question">📍 ¿Dónde están ubicados? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Estamos ubicados en Quilpué, Chile. Atendemos con previa cita.</p>
+        <div class="space-y-4" id="faq-container">
+            <!-- Pregunta 1 - Estructura mejorada -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-all"
+                 x-data="{ open: false }"
+                 data-faq-item>
+                <button 
+                    @click="toggleFAQ($event.currentTarget)"
+                    class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none focus:ring-2 focus:ring-primario/50"
+                    aria-expanded="false"
+                >
+                    <div class="flex items-center">
+                        <span class="bg-primario text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-lg text-gray-800">¿Qué tipos de reparaciones realizan?</h3>
+                    </div>
+                    <i class="fas fa-chevron-down text-secundario transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 ml-14 overflow-hidden">
+                    <div class="prose prose-sm text-gray-600">
+                        <p>Realizamos todo tipo de reparaciones y mantenimiento para:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li>Computadoras de escritorio (limpieza, cambio de componentes)</li>
+                            <li>Notebooks (reemplazo de pantallas, teclados)</li>
+                            <li>Consolas de videojuegos (limpieza interna)</li>
+                            <li>Instalación de sistemas operativos</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">🔒 ¿Es seguro dejar mi equipo? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Sí, trabajamos con total transparencia y profesionalismo. Antes de realizar cualquier cambio en el equipo, te informamos y solicitamos tu aprobación. Además, respetamos tu privacidad, por lo que no accedemos a tus archivos personales sin tu autorización.</p>
+
+            <!-- Pregunta 2 -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 hover:shadow-md transition-all"
+                 x-data="{ open: false }"
+                 data-faq-item>
+                <button 
+                    @click="toggleFAQ($event.currentTarget)"
+                    class="faq-btn w-full flex justify-between items-center p-6 text-left focus:outline-none focus:ring-2 focus:ring-primario/50"
+                    aria-expanded="false"
+                >
+                    <div class="flex items-center">
+                        <span class="bg-primario text-white rounded-full w-8 h-8 flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-sm"></i>
+                        </span>
+                        <h3 class="font-semibold text-lg text-gray-800">¿Ofrecen garantía en las reparaciones?</h3>
+                    </div>
+                    <i class="fas fa-chevron-down text-secundario transition-transform duration-300"></i>
+                </button>
+                <div class="faq-answer hidden px-6 pb-6 ml-14 overflow-hidden">
+                    <div class="prose prose-sm text-gray-600">
+                        <p>Sí, todas nuestras reparaciones incluyen garantía:</p>
+                        <ul class="list-disc pl-5 mt-2 space-y-1">
+                            <li><span class="font-medium">30 días</span> para reparaciones generales</li>
+                            <li><span class="font-medium">90 días</span> para componentes nuevos</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <!-- Preguntas 3 a 5 (mismo patrón) -->
+            <!-- ... -->
         </div>
 
-        <div class="faq-item">
-            <button class="faq-question">📞 ¿Cómo puedo agendar un servicio? <i class="fas fa-chevron-down"></i></button>
-            <div class="faq-answer">
-                <p>Puedes agendar a través de nuestro WhatsApp y Correo o, a través de nuestro Instagram @quilpuefix.cl</p>
+        <!-- CTA -->
+        <div class="text-center mt-12">
+            <a href="https://wa.me/56973196767" class="inline-flex items-center bg-primario hover:bg-secundario text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                <i class="fab fa-whatsapp mr-2 text-xl"></i> Contáctanos por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Términos y Condiciones -->
+<section id="terminos" class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold text-primario">Términos y Condiciones</h2>
+            <p class="text-lg text-gray-600 mt-2">Normativas de servicio y garantías</p>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-md overflow-hidden">
+            <div class="p-6 sm:p-8">
+                <!-- 1. Alcance del Servicio -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primario mb-4 flex items-center">
+                        <span class="bg-primario text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 text-sm">1</span>
+                        Alcance del Servicio
+                    </h3>
+                    <div class="pl-9">
+                        <p class="text-gray-600 mb-3">Los servicios de reparación y mantenimiento ofrecidos por QuilpueFix incluyen:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
+                            <li>Diagnóstico técnico de hardware y software</li>
+                            <li>Limpieza y mantenimiento preventivo</li>
+                            <li>Reparación de componentes</li>
+                            <li>Instalación y configuración de sistemas operativos</li>
+                            <li>Optimización de rendimiento</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Garantías -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primario mb-4 flex items-center">
+                        <span class="bg-primario text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 text-sm">2</span>
+                        Política de Garantías
+                    </h3>
+                    <div class="pl-9">
+                        <p class="text-gray-600 mb-3">QuilpueFix ofrece las siguientes garantías:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
+                            <li><span class="font-medium">30 días</span> para reparaciones y mantenimiento</li>
+                            <li><span class="font-medium">90 días</span> para componentes nuevos instalados</li>
+                            <li>Garantía no cubre daños por mal uso o modificaciones externas</li>
+                            <li>Requiere presentación de boleta de servicio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Responsabilidades -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-semibold text-primario mb-4 flex items-center">
+                        <span class="bg-primario text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 text-sm">3</span>
+                        Responsabilidades del Cliente
+                    </h3>
+                    <div class="pl-9">
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
+                            <li>Realizar backup de datos antes del servicio</li>
+                            <li>Informar sobre cualquier condición especial del equipo</li>
+                            <li>Retirar el equipo dentro de los 15 días posteriores a la finalización</li>
+                            <li>Proporcionar información veraz sobre el historial del dispositivo</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Documentación -->
+                <div id="documentacion-fiscal" class="mb-8">
+                    <h3 class="text-xl font-semibold text-primario mb-4 flex items-center">
+                        <span class="bg-primario text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 text-sm">4</span>
+                        Documentación Fiscal
+                    </h3>
+                    <div class="pl-9">
+                        <p class="text-gray-600 mb-3">Todos los servicios incluyen:</p>
+                        <ul class="list-disc list-inside text-gray-600 space-y-2 pl-4">
+                            <li>Boleta de honorarios electrónica</li>
+                            <li>Detalle de servicios realizados</li>
+                            <li>Informe técnico cuando corresponda</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Privacidad -->
+                <div id="politica-privacidad" class="mb-8">
+                    <h3 class="text-xl font-semibold text-primario mb-4 flex items-center">
+                        <span class="bg-primario text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 text-sm">5</span>
+                        Política de Privacidad
+                    </h3>
+                    <div class="pl-9">
+                        <p class="text-gray-600">QuilpueFix respeta la privacidad de los datos del cliente y solo accede a archivos personales cuando es estrictamente necesario para el servicio contratado, previa autorización.</p>
+                    </div>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-botonHover p-4 rounded-lg mt-8 text-center">
+                    <p class="text-primario font-medium">¿Necesitas más información sobre nuestros términos?</p>
+                    <a href="https://wa.me/56973196767" class="inline-block mt-2 bg-primario hover:bg-secundario text-white font-bold py-2 px-6 rounded-lg transition-colors">
+                        <i class="fab fa-whatsapp mr-2"></i> Consultar por WhatsApp
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-</section>    
 </section>
 
     <!-- Footer -->
@@ -602,14 +888,14 @@
                 <div>
                     <h3 class="text-lg font-semibold text-botonHover uppercase tracking-wider mb-4">Legal</h3>
                     <ul class="space-y-3">
-                        <li><a href="#" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
+                        <li><a href="terminos" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
                             <i class="fas fa-file-alt text-xs mr-2 text-secundario"></i> Términos y Condiciones
                         </a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
+                        <li><a href="politica-privacidad" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
                             <i class="fas fa-lock text-xs mr-2 text-secundario"></i> Política de Privacidad
                         </a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
-                            <i class="fas fa-receipt text-xs mr-2 text-secundario"></i> Documentación Tributaria
+                        <li><a href="documentacion-fiscal" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
+                            <i class="fas fa-receipt text-xs mr-2 text-secundario"></i> Documentación Fiscal
                         </a></li>
                         <li><a href="#reseñas" class="text-gray-300 hover:text-botonHover transition-colors flex items-center">
                             <i class="fas fa-star text-xs mr-2 text-secundario"></i> Reseñas de Clientes
@@ -659,5 +945,6 @@
             </div>
         </div>
     </footer>
+    <script src="main.js"></script>
 </body>
 </html>

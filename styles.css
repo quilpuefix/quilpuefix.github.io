@@ -1,123 +1,80 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    overflow-x: hidden;
-}
-
-/* Contenido principal */
-.main-content {
-    flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
-}
-
-/* Reseñas */
-.reviews-container {
-    text-align: center;
-    padding: 40px 0;
-}
-
-.reviews-title {
-    font-size: 28px;
-    font-weight: bold;
-    color: #1E2A38;
-    margin-bottom: 10px;
-}
-
-.reviews-description {
-    font-size: 18px;
-    color: #4A4A4A;
-    margin-bottom: 20px;
-}
-
-/* Servicios */
-.accordion-content {
-    transition: all 0.3s ease-out;
-    max-height: 0;
-    overflow: hidden;
-}
-.accordion-content.active {
-    max-height: 500px;
-}
-
-/* Trabajos realizados */
-    .scrollbar-hide::-webkit-scrollbar {
-        display: none;
-    }
-    .scrollbar-hide {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-/* Sección FAQ */
-#faq {
-    max-width: 800px;
-    margin: auto;
-    padding: 40px 20px;
-    text-align: center;
-}
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
 
-#faq h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
-}
+    /* Contenido principal */
+    .main-content {
+        flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+    }
 
-.faq-container {
-    text-align: left;
-}
+    /* Reseñas */
+    .reviews-container {
+        text-align: center;
+        padding: 40px 0;
+    }
 
-.faq-item {
-    background: #f8f9fa;
-    margin: 10px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    border: 1px solid #ddd;
-}
+    .reviews-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #1E2A38;
+        margin-bottom: 10px;
+    }
 
-.faq-question {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.1rem;
-    background: #ffffff;
-    border: none;
-    cursor: pointer;
-    text-align: left;
-    outline: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
-    transition: background 0.3s;
-}
+    .reviews-description {
+        font-size: 18px;
+        color: #4A4A4A;
+        margin-bottom: 20px;
+    }
 
-.faq-question:hover {
-    background: #e9ecef;
-}
+    /* Servicios */
+    .accordion-content {
+        transition: all 0.3s ease-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .accordion-content.active {
+        max-height: 500px;
+    }
 
-.faq-answer {
-    display: none;
-    padding: 15px;
-    background: #ffffff;
-    font-size: 1rem;
-    line-height: 1.6;
-}
+    /* Trabajos realizados */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
-.faq-answer p {
-    margin: 0;
-}
+    /* Sección FAQ */
+    .faq-answer {
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .faq-answer:not(.hidden) {
+        max-height: 500px;
+        opacity: 1;
+    }
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
 
-.faq-item.active .faq-answer {
-    display: block;
+/* Efecto hover para los videos */
+.video-container:hover .video-overlay {
+    opacity: 1;
 }
-
-.faq-item.active .faq-question {
-    background: #e9ecef;
+.video-overlay {
+    transition: opacity 0.3s ease;
 }

@@ -78,3 +78,8 @@
 .video-overlay {
     transition: opacity 0.3s ease;
 }
+/* Opcional: Asegurar buen renderizado del SVG */
+#metodos-pago img {
+    max-width: 100%;
+    height: auto;
+}

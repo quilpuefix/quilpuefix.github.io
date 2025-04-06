@@ -156,14 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/* Efecto hover para los videos */
-.video-container:hover .video-overlay {
-    opacity: 1;
-}
-.video-overlay {
-    transition: opacity 0.3s ease;
-}
-</style>
+
 
 // Control de videos
 document.addEventListener('DOMContentLoaded', function() {

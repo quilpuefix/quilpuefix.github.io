@@ -1,0 +1,85 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    /* Contenido principal */
+    .main-content {
+        flex-grow: 1; /* Permite que el contenido ocupe el espacio disponible */
+    }
+
+    /* Reseñas */
+    .reviews-container {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .reviews-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #1E2A38;
+        margin-bottom: 10px;
+    }
+
+    .reviews-description {
+        font-size: 18px;
+        color: #4A4A4A;
+        margin-bottom: 20px;
+    }
+
+    /* Servicios */
+    .accordion-content {
+        transition: all 0.3s ease-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+    .accordion-content.active {
+        max-height: 500px;
+    }
+
+    /* Trabajos realizados */
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+    /* Sección FAQ */
+    .faq-answer {
+        transition: max-height 0.3s ease, opacity 0.2s ease;
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+    }
+    .faq-answer:not(.hidden) {
+        max-height: 500px;
+        opacity: 1;
+    }
+    .rotate-180 {
+        transform: rotate(180deg);
+    }
+
+/* Efecto hover para los videos */
+.video-container:hover .video-overlay {
+    opacity: 1;
+}
+.video-overlay {
+    transition: opacity 0.3s ease;
+}
+/* Opcional: Asegurar buen renderizado del SVG */
+#metodos-pago img {
+    max-width: 100%;
+    height: auto;
+}
